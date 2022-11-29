@@ -1,13 +1,31 @@
 import React from 'react'
-
+import emailjs from 'emailjs-com';
 
 import "./Contact.css"
 
 const Contact = () => {
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_v9arvjm', 'template_u11i98l', e.target, 'jNCRXxN7rA97sBEv3')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      }).then(
+          _message => alert('Message sent successfully. Kindly wait for Mr James reply')
+      );
+
+      e.target.reset()
+
+  };
+
+
   return (
     <section>
       <div className='container'>
-          <form>
+          <form onSubmit={sendEmail}>
             <h2>Contact me</h2>
             <h3>I am always available...</h3>
 
