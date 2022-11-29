@@ -13,7 +13,7 @@ section {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background: #001923;
+    background: url('./Images/backk.jpg') no-repeat center center/cover;
 }
 
 section::before {
@@ -43,13 +43,13 @@ section::after {
     max-width: 1000px;
     padding: 50px;
     background: rgba(255,255,255,0.1);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.03);
     border: 1px solid rgba(255,255,255,0.25);
     border-right: 1px solid rgba(255,255,255,0.1);
     border-bottom: 1px solid rgba(255,255,255,0.1);
     border-radius: 10px;
     overflow: hidden;
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(30px);
 }
 
 .container::before{
