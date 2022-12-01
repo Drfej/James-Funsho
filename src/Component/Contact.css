@@ -13,28 +13,20 @@ section {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    background-color: rgba(26, 27, 52, 0.96);
+}
+
+section:before {
+    position: absolute;
+    content: '';
     background: url('./Images/backk.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-section::before {
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(#ffeb3b, #e91e63);
-    border-radius: 50%;
-    transform: translate(-420px, -180px);
-}
-
-section::after {
-    content: '';
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    background: linear-gradient(#2196f3, #83d8ff);
-    border-radius: 50%;
-    transform: translate(400px, 180px);
-}
 
 .container {
     position: relative;
@@ -49,7 +41,7 @@ section::after {
     border-bottom: 1px solid rgba(255,255,255,0.1);
     border-radius: 10px;
     overflow: hidden;
-    backdrop-filter: blur(30px);
+    /* backdrop-filter: blur(30px); */
 }
 
 .container::before{
@@ -190,14 +182,6 @@ section::after {
 
 
 @media (max-width: 800px) {
-
-
-    section::before {
-        display: none;
-    }
-    section::after {
-        display: none;
-    }
 
     .container {
         padding: 20px;

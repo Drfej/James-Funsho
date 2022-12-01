@@ -26,7 +26,7 @@ const Contact = () => {
     <section>
       <div className='container'>
           <form onSubmit={sendEmail}>
-            <h2>Contact me</h2>
+            <h2>Contact Me</h2>
             <h3>I am always available...</h3>
 
             <div className='row100'>
